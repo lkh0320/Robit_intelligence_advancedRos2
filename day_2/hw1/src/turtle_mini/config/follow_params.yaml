@@ -1,0 +1,15 @@
+# 최상위 키 = 노드 이름 (launch의 name과 같아야 적용됨)
+turtle_follower:
+  ros__parameters:
+    k_ang: 4.0            # 회전 이득 (클수록 빨리 방향을 튼다)
+    k_lin: 0.5            # 직진 이득 (클수록 빨리 따라간다)
+    max_lin_vel: 2.0      # 직진 속도 상한 [m/s]
+    max_ang_vel: 3.0      # 회전 속도 상한 [rad/s]
+    stop_distance: 1.0    # 이 거리 안이면 멈춤 [m]
+    control_rate: 10.0    # 제어 주기 [Hz]
+    # 아래는 read only (실행 중 변경 불가)
+    leader_frame: turtle1
+    follower_frame: turtle2
+    spawn_x: 4.0
+    spawn_y: 2.0
+    spawn_theta: 0.0

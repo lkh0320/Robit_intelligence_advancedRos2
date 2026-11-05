@@ -1,0 +1,14 @@
+# params_file:=.../follow_fast.yaml 로 바꿔 끼우는 예시: 빠르고 바짝 붙어 따라감
+turtle_follower:
+  ros__parameters:
+    k_ang: 6.0
+    k_lin: 1.5
+    max_lin_vel: 4.0
+    max_ang_vel: 6.0
+    stop_distance: 0.5
+    control_rate: 20.0
+    leader_frame: turtle1
+    follower_frame: turtle2
+    spawn_x: 1.0
+    spawn_y: 1.0
+    spawn_theta: 0.0
