@@ -61,13 +61,12 @@ data: 'BB1 pos=(-0.88,0.64) | 챌린지: MARBLE-4845 | 이 단어를 그대로 /
 + 도메인 89의 `/bb_b7f2/config`는 접두사가 내 것(`bb_3868`)과 다르고, 다시 조회하니 사라져 있어서 제외했다.
 
 ### 응답
-+ `--once -w 0`(구독자를 안 기다림)으로 보냈더니 통과가 안 됐다. 매칭되기 전에 보낸 메시지는 버려진다.
-+ `-t 5 -r 1`로 매칭될 때까지 기다렸다가 5번 보내니 통과했다.
++ 로봇 구독자와 매칭되기 전에 보낸 메시지는 버려지므로, `-t 5 -r 1`로 매칭될 때까지 기다렸다가 5번 보내니 통과했다.
 ```bash
 ROS_DOMAIN_ID=60 ros2 topic pub -t 5 -r 1 /bb_3868/ack std_msgs/msg/String "{data: 'MARBLE-4845'}"
 ```
 + ![](images/01_step1_pass.png)
-+ 실행 기록: [s1_try1_scan_v1](logs/s1_try1_scan_v1.txt), [s1_try1_daemons](logs/s1_try1_daemons.txt), [s1_try2_scan_v2](logs/s1_try2_scan_v2.txt), [s1_try3_scan_final](logs/s1_try3_scan_final.txt), [s1_try4_signal](logs/s1_try4_signal.txt), [s1_try5_reply_once](logs/s1_try5_reply_once.txt), [s1_final_reply](logs/s1_final_reply.txt)
++ 실행 기록: [s1_try1_scan_v1](logs/s1_try1_scan_v1.txt), [s1_try1_daemons](logs/s1_try1_daemons.txt), [s1_try2_scan_v2](logs/s1_try2_scan_v2.txt), [s1_try3_scan_final](logs/s1_try3_scan_final.txt), [s1_try4_signal](logs/s1_try4_signal.txt), [s1_final_reply](logs/s1_final_reply.txt)
 
 ---
 
