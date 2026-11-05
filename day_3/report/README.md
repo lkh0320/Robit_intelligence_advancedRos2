@@ -13,6 +13,7 @@
 기록 해시: f9deb97b5bbd589a
 ```
 + 원본: [logs/final_report_output.txt](logs/final_report_output.txt)
++ ![status 1~4단계 통과](images/04_status_all_pass.png)
 + 환경: Ubuntu 24.04, ROS 2 Jazzy, Fast DDS 2.14.7(기본), Cyclone DDS 0.10.5
 + 근거는 전부 내 PC에서 실행한 명령과 출력이다. 원문은 `logs/`, 사진은 `images/`에 있다.
 + 로봇의 소스, 프로세스, 상태 파일은 보지 않았다. 4단계 `listener.env`만 과제대로 열어서 고쳤다.
