@@ -270,8 +270,8 @@ ROS_DOMAIN_ID=43 RMW_IMPLEMENTATION=rmw_cyclonedds_cpp timeout 10 ros2 run demo_
 
 ### 예상과 달랐던 점
 + 처음에 Peer를 준 조건이 Cyclone끼리도 0개가 나와서 이상했다.
-  + 원인은 내 스크립트였다. `${X:+NAME=값}`을 명령 앞에 쓰면 bash가 환경변수가 아니라 명령 이름으로 읽어서 listener가 아예 안 떴다(`FOO=bar: command not found`로 재현).
-  + `env`로 고쳐서 다시 쟀다. 위 표는 고친 뒤의 결과다.
+  + 이유를 몰라서 Claude(AI)에 스크립트를 보여 주고 물어보니, 환경변수를 넘기는 방식이 잘못돼서 listener가 아예 실행되지 않은 거라고 알려 줬다. 실험 결과가 아니라 내 스크립트 문제였다.
+  + 알려 준 대로 `env`를 써서 환경변수를 넘기도록 고치고 다시 쟀다. 위 표는 고친 뒤의 결과다.
 + Fast DDS 쪽에 아무 설정도 안 했는데, Cyclone이 유니캐스트로 보낸 SPDP에 응답한 것도 예상 밖이었다.
 + 실행 기록: [s5_01_interop_matrix](logs/s5_01_interop_matrix.txt), [s5_06_interop_discovery](logs/s5_06_interop_discovery.txt), [s5_07_fast_port](logs/s5_07_fast_port.txt), [버그 재현 s5_05](logs/s5_05_script_bug.txt), 버그 있던 측정 [s5_02](logs/s5_02_INVALID_script_bug.txt), [s5_03](logs/s5_03_INVALID_script_bug.txt)
 
