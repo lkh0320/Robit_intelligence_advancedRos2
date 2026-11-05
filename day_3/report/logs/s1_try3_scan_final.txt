@@ -1,0 +1,13 @@
+$ time ./src/scan.sh | sort -n -k2
+domain 14  /bb_3868/cmd
+domain 15  /bb_3868/command
+domain 60  /bb_3868/ack
+domain 60  /bb_3868/telemetry
+domain 80  /bb_3868/answer
+domain 80  /bb_3868/config
+domain 80  /bb_3868/stream
+domain 89  /bb_b7f2/config
+
+real	0m32.658s
+user	0m40.033s
+sys	0m3.736s

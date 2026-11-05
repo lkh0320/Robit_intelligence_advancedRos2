@@ -1,0 +1,3 @@
+$ ROS_DOMAIN_ID=80 python3 src/default_qos_test.py
+[WARN] [1793885717.425401377] [lkh_default_qos_test]: New publisher discovered on topic '/bb_3868/stream', offering incompatible QoS. No messages will be received from it. Last incompatible policy: RELIABILITY
+10초 동안 받은 메시지 수: config=0, stream=0

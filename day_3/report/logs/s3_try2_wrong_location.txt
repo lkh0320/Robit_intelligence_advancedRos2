@@ -1,0 +1,29 @@
+$ ros2 run robit_blackbox check3 --name lkh
+[lkh] 3단계 요구사항
+  - 검사는 ROS_DOMAIN_ID=63 에서 실행된다 (도구가 알아서 설정)
+  - Peers 에 127.0.0.1 이 있다
+  - AllowMulticast 는 false 또는 spdp
+  - MaxAutoParticipantIndex 는 10
+  - Tracing 의 Verbosity 를 지정하고 OutputFile 은 /tmp/bb3_aef77abe.log
+
+[OK] XML 형식이 올바르다
+[OK] AllowMulticast 가 false 또는 spdp (현재 false)
+[OK] Peers 에 127.0.0.1 이 있다
+[OK] MaxAutoParticipantIndex = 10 (현재 10)
+[OK] Tracing OutputFile = /tmp/bb3_aef77abe.log
+[OK] Tracing Verbosity 가 있다
+
+Cyclone + 당신의 XML 로 talker/listener 를 최대 25초간 돌려 봅니다...
+[NG] listener 가 talker 메시지를 받았다
+[NG] Tracing 로그 파일이 생겼다
+
+실패한 항목을 고친 뒤 다시 실행하세요.
+[ros2run]: Process exited with failure 1
+# 원인 확인: 같은 XML 로 Cyclone 을 직접 띄워 본다
+$ RMW_IMPLEMENTATION=rmw_cyclonedds_cpp CYCLONEDDS_URI=file://$HOME/cyclonedds_bb.xml ROS_DOMAIN_ID=63 ros2 topic list --no-daemon
+1793897110.502208 [63]       ros2: config: //CycloneDDS/Domain/General: Peers: unknown element (file:///home/lkh-ubuntu/cyclonedds_bb.xml line 7)
+1793897110.502221 [63]       ros2: config: //CycloneDDS/Domain/General: MaxAutoParticipantIndex: unknown element (line 10)
+[ERROR] [1793897110.502260169] [rmw_cyclonedds_cpp]: rmw_create_node: failed to create domain, error Error
+/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py:188: RuntimeWarning: Failed to fini rosout publisher: rcl node implementation is invalid, at ./src/rcl/node.c:390
+  self.__node = _rclpy.Node(
+error creating node: error not set, at ./src/rcl/node.c:252

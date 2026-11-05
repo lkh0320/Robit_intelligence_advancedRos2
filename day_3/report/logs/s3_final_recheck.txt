@@ -1,0 +1,6 @@
+# 주석만 추가한 최종본으로 재확인
+$ ros2 run robit_blackbox check3 --name lkh
+[OK] listener 가 talker 메시지를 받았다
+[OK] Tracing 로그 파일이 생겼다
+
+★ 3단계 통과! 기록되었습니다. 보고서에는 XML 과 로그에서 찾은 근거 2~3줄을 함께 넣으세요.

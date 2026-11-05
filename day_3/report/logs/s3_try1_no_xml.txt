@@ -1,0 +1,10 @@
+$ ros2 run robit_blackbox check3 --name lkh
+[lkh] 3단계 요구사항
+  - 검사는 ROS_DOMAIN_ID=63 에서 실행된다 (도구가 알아서 설정)
+  - Peers 에 127.0.0.1 이 있다
+  - AllowMulticast 는 false 또는 spdp
+  - MaxAutoParticipantIndex 는 10
+  - Tracing 의 Verbosity 를 지정하고 OutputFile 은 /tmp/bb3_aef77abe.log
+
+[NG] 설정 파일이 없습니다: /home/lkh-ubuntu/cyclonedds_bb.xml
+[ros2run]: Process exited with failure 1

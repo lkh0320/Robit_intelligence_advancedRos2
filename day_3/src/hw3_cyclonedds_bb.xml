@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 3단계: check3 요구사항(lkh)에 맞춘 Cyclone DDS 설정 -->
+<CycloneDDS xmlns="https://cdds.io/config">
+  <!-- id="any": 도메인 번호는 ROS_DOMAIN_ID 를 따른다 (check3 가 63 으로 설정) -->
+  <Domain id="any">
+    <General>
+      <!-- 멀티캐스트를 끈다. 발견(SPDP)도 Peers 로 유니캐스트 -->
+      <AllowMulticast>false</AllowMulticast>
+    </General>
+    <Discovery>
+      <!-- 멀티캐스트가 없으니 SPDP 를 보낼 상대를 직접 적는다 -->
+      <Peers>
+        <Peer address="127.0.0.1"/>
+      </Peers>
+      <!-- 참가자 인덱스 0..9 의 유니캐스트 포트로 SPDP 를 보낸다 (ParticipantIndex 기본값 auto) -->
+      <MaxAutoParticipantIndex>10</MaxAutoParticipantIndex>
+    </Discovery>
+    <Tracing>
+      <Verbosity>config</Verbosity>
+      <OutputFile>/tmp/bb3_aef77abe.log</OutputFile>
+    </Tracing>
+  </Domain>
+</CycloneDDS>

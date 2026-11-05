@@ -1,0 +1,269 @@
+$ time ./src/scan_v1.sh
+== domain 10
+/parameter_events
+/rosout
+== domain 11
+/parameter_events
+/rosout
+== domain 12
+/parameter_events
+/rosout
+== domain 13
+/parameter_events
+/rosout
+== domain 14
+/parameter_events
+/rosout
+== domain 15
+/bb_3868/command
+/parameter_events
+/rosout
+== domain 16
+/parameter_events
+/rosout
+== domain 17
+/parameter_events
+/rosout
+== domain 18
+/parameter_events
+/rosout
+== domain 19
+/parameter_events
+/rosout
+== domain 20
+/parameter_events
+/rosout
+== domain 21
+/parameter_events
+/rosout
+== domain 22
+/parameter_events
+/rosout
+== domain 23
+/parameter_events
+/rosout
+== domain 24
+/parameter_events
+/rosout
+== domain 25
+/parameter_events
+/rosout
+== domain 26
+/parameter_events
+/rosout
+== domain 27
+/parameter_events
+/rosout
+== domain 28
+/parameter_events
+/rosout
+== domain 29
+/parameter_events
+/rosout
+== domain 30
+/parameter_events
+/rosout
+== domain 31
+/parameter_events
+/rosout
+== domain 32
+/parameter_events
+/rosout
+== domain 33
+/parameter_events
+/rosout
+== domain 34
+/parameter_events
+/rosout
+== domain 35
+/parameter_events
+/rosout
+== domain 36
+/parameter_events
+/rosout
+== domain 37
+/parameter_events
+/rosout
+== domain 38
+/parameter_events
+/rosout
+== domain 39
+/parameter_events
+/rosout
+== domain 40
+/parameter_events
+/rosout
+== domain 41
+/parameter_events
+/rosout
+== domain 42
+/parameter_events
+/rosout
+== domain 43
+/parameter_events
+/rosout
+== domain 44
+/parameter_events
+/rosout
+== domain 45
+/parameter_events
+/rosout
+== domain 46
+/parameter_events
+/rosout
+== domain 47
+/parameter_events
+/rosout
+== domain 48
+/parameter_events
+/rosout
+== domain 49
+/parameter_events
+/rosout
+== domain 50
+/parameter_events
+/rosout
+== domain 51
+/parameter_events
+/rosout
+== domain 52
+/parameter_events
+/rosout
+== domain 53
+/parameter_events
+/rosout
+== domain 54
+/parameter_events
+/rosout
+== domain 55
+/parameter_events
+/rosout
+== domain 56
+/parameter_events
+/rosout
+== domain 57
+/parameter_events
+/rosout
+== domain 58
+/parameter_events
+/rosout
+== domain 59
+/parameter_events
+/rosout
+== domain 60
+/parameter_events
+/rosout
+== domain 61
+/parameter_events
+/rosout
+== domain 62
+/parameter_events
+/rosout
+== domain 63
+/parameter_events
+/rosout
+== domain 64
+/bb_9a0c/config
+/bb_9a0c/stream
+/parameter_events
+/rosout
+== domain 65
+/parameter_events
+/rosout
+== domain 66
+/parameter_events
+/rosout
+== domain 67
+/parameter_events
+/rosout
+== domain 68
+/parameter_events
+/rosout
+== domain 69
+/parameter_events
+/rosout
+== domain 70
+/parameter_events
+/rosout
+== domain 71
+/parameter_events
+/rosout
+== domain 72
+/parameter_events
+/rosout
+== domain 73
+/parameter_events
+/rosout
+== domain 74
+/parameter_events
+/rosout
+== domain 75
+/parameter_events
+/rosout
+== domain 76
+/parameter_events
+/rosout
+== domain 77
+/parameter_events
+/rosout
+== domain 78
+/parameter_events
+/rosout
+== domain 79
+/parameter_events
+/rosout
+== domain 80
+/bb_3868/answer
+/bb_3868/config
+/bb_3868/stream
+/parameter_events
+/rosout
+== domain 81
+/parameter_events
+/rosout
+== domain 82
+/parameter_events
+/rosout
+== domain 83
+/parameter_events
+/rosout
+== domain 84
+/parameter_events
+/rosout
+== domain 85
+/parameter_events
+/rosout
+== domain 86
+/parameter_events
+/rosout
+== domain 87
+/parameter_events
+/rosout
+== domain 88
+/parameter_events
+/rosout
+== domain 89
+/parameter_events
+/rosout
+== domain 90
+/parameter_events
+/rosout
+== domain 91
+/parameter_events
+/rosout
+== domain 92
+/parameter_events
+/rosout
+== domain 93
+/parameter_events
+/rosout
+== domain 94
+/parameter_events
+/rosout
+== domain 95
+/parameter_events
+/rosout
+
+real	1m19.796s
+user	0m25.945s
+sys	0m3.267s

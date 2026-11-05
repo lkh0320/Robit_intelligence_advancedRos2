@@ -1,0 +1,13 @@
+$ ROS_DOMAIN_ID=60 ros2 topic pub --once -w 0 /bb_3868/ack std_msgs/msg/String "{data: 'MARBLE-4845'}"
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='MARBLE-4845')
+
+
+$ ros2 run robit_blackbox status --name lkh
+이름: lkh
+  1단계 정찰                 -
+  2단계 QoS                -
+  3단계 Cyclone 설정         -
+  4단계 고장 진단 (도전)         -
+  5단계 자유 탐구        보고서로 제출
+

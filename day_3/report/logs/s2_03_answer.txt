@@ -1,0 +1,31 @@
+$ head -3 logs/s2_02_bb_sub.log
+[INFO] [1793885669.429015315] [lkh_bb_sub]: [config] BB2-A word=4513 | 스트림은 /bb_3868/stream | 각 메시지의 word= 뒤 값 두 개를 A-B 순서로 "-" 로 이어 /bb_3868/answer 로 보내라 (구독 노드가 켜져 있는 동안) | 다음 신호: 도메인 14의 /bb_3868/cmd
+[INFO] [1793885669.429386384] [lkh_bb_sub]: [stream] BB2-B word=a2a9 n=11917
+[INFO] [1793885669.525677013] [lkh_bb_sub]: [stream] BB2-B word=a2a9 n=11918
+
+$ ROS_DOMAIN_ID=80 ros2 topic info /bb_3868/config --no-daemon --spin-time 4 | grep count
+Publisher count: 1
+Subscription count: 1
+
+$ ROS_DOMAIN_ID=80 ros2 topic pub -t 5 -r 1 /bb_3868/answer std_msgs/msg/String "{data: '4513-a2a9'}"
+Waiting for at least 1 matching subscription(s)...
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='4513-a2a9')
+
+publishing #2: std_msgs.msg.String(data='4513-a2a9')
+
+publishing #3: std_msgs.msg.String(data='4513-a2a9')
+
+publishing #4: std_msgs.msg.String(data='4513-a2a9')
+
+publishing #5: std_msgs.msg.String(data='4513-a2a9')
+
+
+$ ros2 run robit_blackbox status --name lkh
+이름: lkh
+  1단계 정찰                 통과  2026-11-05T22:19:44+09:00
+  2단계 QoS                통과  2026-11-05T22:34:50+09:00
+  3단계 Cyclone 설정         -
+  4단계 고장 진단 (도전)         -
+  5단계 자유 탐구        보고서로 제출
+

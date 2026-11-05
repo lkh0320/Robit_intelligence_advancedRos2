@@ -1,0 +1,19 @@
+# 버그 수정 후 다시 측정 (listener 만 XML 적용, talker 는 기본 설정)
+$ src/step5/interop.sh cyclone cyclone no_peers.xml
+== 도메인 43  talker=rmw_cyclonedds_cpp  listener=rmw_cyclonedds_cpp  (listener XML: no_peers.xml)
+   10초 동안 받은 메시지: 0 개
+
+$ src/step5/interop.sh fast cyclone no_peers.xml
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_cyclonedds_cpp  (listener XML: no_peers.xml)
+   10초 동안 받은 메시지: 0 개
+
+$ src/step5/interop.sh cyclone cyclone peers_localhost.xml
+== 도메인 43  talker=rmw_cyclonedds_cpp  listener=rmw_cyclonedds_cpp  (listener XML: peers_localhost.xml)
+   10초 동안 받은 메시지: 9 개
+   첫 메시지: [INFO] [1793901852.548181041] [listener]: I heard: [Hello World: 3]
+
+$ src/step5/interop.sh fast cyclone peers_localhost.xml
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_cyclonedds_cpp  (listener XML: peers_localhost.xml)
+   10초 동안 받은 메시지: 8 개
+   첫 메시지: [INFO] [1793901867.776503383] [listener]: I heard: [Hello World: 4]
+

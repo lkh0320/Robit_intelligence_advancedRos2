@@ -1,0 +1,13 @@
+$ grep -n -E 'Domain/General/AllowMulticast|Discovery/Peers/Peer|Discovery/ParticipantIndex|MaxAutoParticipantIndex' /tmp/bb3_aef77abe.log | head -5
+4:1793897118.128422 [63]     talker: config: Domain/General/AllowMulticast/#text: false {2}
+24:1793897118.128455 [63]     talker: config: Domain/Discovery/Peers/Peer[@Address]: 127.0.0.1 {2}
+25:1793897118.128456 [63]     talker: config: Domain/Discovery/ParticipantIndex/#text: auto {0}
+26:1793897118.128458 [63]     talker: config: Domain/Discovery/MaxAutoParticipantIndex/#text: 10 {0,2}
+
+$ grep -n -E 'interfaces:|selected interfaces' /tmp/bb3_aef77abe.log | head -5
+40:11793897118.128646 [63]   listener: udp initialized1793897118.128858 [63]     talker: interfaces: lo udp/127.0.0.1(q1) wlp99s0 udp/192.168.200.196(q9) enx000000000acc udp/192.168.200.135(q9)
+42:1793897118.128870 [63]     talker: selected interfaces: wlp99s0 (index 2 priority 0)
+
+$ grep -n -E 'add_peer_addresses' /tmp/bb3_aef77abe.log | head -5
+53:1793897118.129335 [63]     talker: add_peer_addresses: add udp/127.0.0.1:23160, :23162, :23164, :23166, :23168, :23170, :23172, :23174, :23176, :23178
+

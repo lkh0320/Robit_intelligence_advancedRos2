@@ -1,0 +1,8 @@
+# talker 가 왜 죽었나: Fast talker + ROS_STATIC_PEERS=127.0.0.1 를 단독 실행해 출력 확인
+$ ROS_DOMAIN_ID=43 RMW_IMPLEMENTATION=rmw_fastrtps_cpp ROS_STATIC_PEERS=127.0.0.1 timeout 5 talker
+[INFO] [1793901801.366138740] [talker]: Publishing: 'Hello World: 1'
+[INFO] [1793901802.366126491] [talker]: Publishing: 'Hello World: 2'
+[INFO] [1793901803.366116497] [talker]: Publishing: 'Hello World: 3'
+[INFO] [1793901804.366111745] [talker]: Publishing: 'Hello World: 4'
+[INFO] [1793901805.342754615] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+exit=124

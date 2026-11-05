@@ -1,0 +1,28 @@
+# 수정 2: LISTENER_TOPIC /bb_3868/command → /bb_3868/cmd (talker 토픽 이름)
+$ cat /home/lkh-ubuntu/.ros/robit_blackbox/aef77abe/listener.env
+# 로봇 listener 의 설정. 이 파일을 고치면 listener 가 자동으로 다시 시작된다.
+# 값 중 일부가 틀려 있다. 로봇이 보내는 신호를 조사해서 고쳐라.
+LISTENER_DOMAIN=14
+LISTENER_TOPIC=/bb_3868/cmd
+LISTENER_TYPE=Int32
+LISTENER_RELIABILITY=best_effort
+
+$ ROS_DOMAIN_ID=14 ros2 topic info -v /bb_3868/cmd --no-daemon --spin-time 4 | grep -E "count|Node name|Endpoint type|Reliability"
+Publisher count: 1
+Node name: bb_talker4
+Node namespace: /
+Endpoint type: PUBLISHER
+  Reliability: BEST_EFFORT
+Subscription count: 1
+Node name: bb_listener4
+Node namespace: /
+Endpoint type: SUBSCRIPTION
+  Reliability: BEST_EFFORT
+
+$ ros2 run robit_blackbox status --name lkh
+이름: lkh
+  1단계 정찰                 통과  2026-11-05T22:19:44+09:00
+  2단계 QoS                통과  2026-11-05T22:34:50+09:00
+  3단계 Cyclone 설정         통과  2026-11-06T01:45:20+09:00
+  4단계 고장 진단 (도전)         통과  2026-11-06T02:57:51+09:00
+  5단계 자유 탐구        보고서로 제출

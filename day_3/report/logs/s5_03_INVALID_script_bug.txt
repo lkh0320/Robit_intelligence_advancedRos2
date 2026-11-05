@@ -1,0 +1,11 @@
+# 대조군: Cyclone 끼리는 같은 설정(B)으로 되는가?
+$ src/step5/interop.sh cyclone cyclone peers_localhost.xml   (talker 는 기본 설정)
+== 도메인 43  talker=rmw_cyclonedds_cpp  listener=rmw_cyclonedds_cpp  (listener XML: peers_localhost.xml)
+   10초 동안 받은 메시지: 0 개
+
+# 가설: Fast DDS 가 Cyclone 쪽으로 SPDP 를 보내지 않는다 → Fast 에도 유니캐스트 피어를 준다
+$ TALKER_PEERS=127.0.0.1 src/step5/interop.sh fast cyclone peers_localhost.xml
+== 도메인 43  talker=rmw_fastrtps_cpp (ROS_STATIC_PEERS=127.0.0.1)  listener=rmw_cyclonedds_cpp  (listener XML: peers_localhost.xml)
+src/step5/interop.sh: line 17: kill: (29462) - No such process
+   10초 동안 받은 메시지: 0 개
+

@@ -1,0 +1,5 @@
+# 원인: 스크립트 버그. 변수 확장으로 만든 NAME=값 은 bash 에서 명령 이름이 된다
+$ X=1; ${X:+FOO=bar} echo hi
+bash: line 1: FOO=bar: command not found
+$ env ${X:+FOO=bar} sh -c "echo FOO=\$FOO"
+FOO=bar

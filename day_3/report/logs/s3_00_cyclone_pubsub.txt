@@ -1,0 +1,8 @@
+$ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp ROS_DOMAIN_ID=44
+$ ros2 doctor --report | grep "middleware name"
+middleware name    : rmw_cyclonedds_cpp
+
+$ ros2 topic pub -r 1 /cyclone_test std_msgs/msg/String "{data: 'hello cyclone'}"   # 터미널 1 (백그라운드)
+$ ros2 topic echo /cyclone_test --once                                                     # 터미널 2
+data: hello cyclone
+---

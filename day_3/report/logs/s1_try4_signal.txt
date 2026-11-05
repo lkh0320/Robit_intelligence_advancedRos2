@@ -1,0 +1,11 @@
+$ ROS_DOMAIN_ID=60 timeout 20 ros2 topic echo /bb_3868/telemetry --once
+WARNING: topic [/bb_3868/telemetry] does not appear to be published yet
+Could not determine the type for the passed topic
+
+$ ROS_DOMAIN_ID=60 timeout 30 ros2 topic echo /bb_3868/telemetry std_msgs/msg/String --once
+data: 'BB1 pos=(-0.88,0.64) | 챌린지: MARBLE-4845 | 이 단어를 그대로 /bb_3868/ack 로 보내라 | 다음 신호: 도메인 80'
+---
+
+$ ROS_DOMAIN_ID=89 ros2 topic info -v /bb_b7f2/config --no-daemon --spin-time 4 | grep -E 'Type:|count|Node name|Reliability|Durability'
+Unknown topic '/bb_b7f2/config'
+

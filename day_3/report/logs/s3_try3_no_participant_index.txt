@@ -1,0 +1,20 @@
+$ ros2 run robit_blackbox check3 --name lkh
+[lkh] 3단계 요구사항
+  - 검사는 ROS_DOMAIN_ID=63 에서 실행된다 (도구가 알아서 설정)
+  - Peers 에 127.0.0.1 이 있다
+  - AllowMulticast 는 false 또는 spdp
+  - MaxAutoParticipantIndex 는 10
+  - Tracing 의 Verbosity 를 지정하고 OutputFile 은 /tmp/bb3_aef77abe.log
+
+[OK] XML 형식이 올바르다
+[OK] AllowMulticast 가 false 또는 spdp (현재 false)
+[OK] Peers 에 127.0.0.1 이 있다
+[OK] MaxAutoParticipantIndex = 10 (현재 10)
+[OK] Tracing OutputFile = /tmp/bb3_aef77abe.log
+[OK] Tracing Verbosity 가 있다
+
+Cyclone + 당신의 XML 로 talker/listener 를 최대 25초간 돌려 봅니다...
+[OK] listener 가 talker 메시지를 받았다
+[OK] Tracing 로그 파일이 생겼다
+
+★ 3단계 통과! 기록되었습니다. 보고서에는 XML 과 로그에서 찾은 근거 2~3줄을 함께 넣으세요.

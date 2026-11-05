@@ -1,0 +1,8 @@
+$ src/step5/interop.sh fast cyclone no_peers.xml
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_cyclonedds_cpp  (listener XML: no_peers.xml)
+   10초 동안 받은 메시지: 0 개
+
+$ src/step5/interop.sh fast cyclone peers_localhost.xml
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_cyclonedds_cpp  (listener XML: peers_localhost.xml)
+   10초 동안 받은 메시지: 0 개
+

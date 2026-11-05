@@ -1,0 +1,20 @@
+$ src/step5/interop.sh fast fast
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_fastrtps_cpp  
+   10초 동안 받은 메시지: 9 개
+   첫 메시지: [INFO] [1793901710.012198474] [listener]: I heard: [Hello World: 3]
+
+$ src/step5/interop.sh cyclone cyclone
+== 도메인 43  talker=rmw_cyclonedds_cpp  listener=rmw_cyclonedds_cpp  
+   10초 동안 받은 메시지: 9 개
+   첫 메시지: [INFO] [1793901722.227164931] [listener]: I heard: [Hello World: 3]
+
+$ src/step5/interop.sh fast cyclone
+== 도메인 43  talker=rmw_fastrtps_cpp  listener=rmw_cyclonedds_cpp  
+   10초 동안 받은 메시지: 8 개
+   첫 메시지: [INFO] [1793901737.458898459] [listener]: I heard: [Hello World: 4]
+
+$ src/step5/interop.sh cyclone fast
+== 도메인 43  talker=rmw_cyclonedds_cpp  listener=rmw_fastrtps_cpp  
+   10초 동안 받은 메시지: 9 개
+   첫 메시지: [INFO] [1793901746.777771460] [listener]: I heard: [Hello World: 3]
+

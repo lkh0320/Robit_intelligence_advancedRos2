@@ -1,0 +1,59 @@
+$ ROS_DOMAIN_ID=14 ros2 topic list -t --no-daemon --spin-time 4
+/bb_3868/cmd [std_msgs/msg/Int32]
+/parameter_events [rcl_interfaces/msg/ParameterEvent]
+/rosout [rcl_interfaces/msg/Log]
+
+$ ROS_DOMAIN_ID=14 ros2 topic info -v /bb_3868/cmd --no-daemon --spin-time 4
+Type: std_msgs/msg/Int32
+
+Publisher count: 1
+
+Node name: bb_talker4
+Node namespace: /
+Topic type: std_msgs/msg/Int32
+Topic type hash: RIHS01_b6578ded3c58c626cfe8d1a6fb6e04f706f97e9f03d2727c9ff4e74b1cef0deb
+Endpoint type: PUBLISHER
+GID: 01.0f.97.69.9b.2f.b0.f2.00.00.00.00.00.00.13.03
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+$ ROS_DOMAIN_ID=14 timeout 15 ros2 topic echo /bb_3868/cmd std_msgs/msg/String --once
+
+$ ROS_DOMAIN_ID=15 ros2 topic info -v /bb_3868/command --no-daemon --spin-time 4
+Type: std_msgs/msg/Int32
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: bb_listener4
+Node namespace: /
+Topic type: std_msgs/msg/Int32
+Topic type hash: RIHS01_b6578ded3c58c626cfe8d1a6fb6e04f706f97e9f03d2727c9ff4e74b1cef0deb
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.97.69.9d.2f.8d.55.00.00.00.00.00.00.13.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+
+$ # 위 echo 는 타입을 String 으로 잘못 줘서 아무것도 못 받음 → 실제 타입 Int32 로 다시
+
+$ ROS_DOMAIN_ID=14 timeout 15 ros2 topic echo /bb_3868/cmd std_msgs/msg/Int32 --qos-reliability best_effort --once
+data: 8661
+---
+

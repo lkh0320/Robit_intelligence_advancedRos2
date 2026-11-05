@@ -1,0 +1,5 @@
+$ time ./src/scan_v2.sh
+
+real	1m19.300s
+user	0m24.808s
+sys	0m3.309s

@@ -1,0 +1,22 @@
+$ ROS_DOMAIN_ID=60 ros2 topic pub -t 5 -r 1 /bb_3868/ack std_msgs/msg/String "{data: 'MARBLE-4845'}"
+Waiting for at least 1 matching subscription(s)...
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='MARBLE-4845')
+
+publishing #2: std_msgs.msg.String(data='MARBLE-4845')
+
+publishing #3: std_msgs.msg.String(data='MARBLE-4845')
+
+publishing #4: std_msgs.msg.String(data='MARBLE-4845')
+
+publishing #5: std_msgs.msg.String(data='MARBLE-4845')
+
+
+$ ros2 run robit_blackbox status --name lkh
+이름: lkh
+  1단계 정찰                 통과  2026-11-05T22:19:44+09:00
+  2단계 QoS                -
+  3단계 Cyclone 설정         -
+  4단계 고장 진단 (도전)         -
+  5단계 자유 탐구        보고서로 제출
+
