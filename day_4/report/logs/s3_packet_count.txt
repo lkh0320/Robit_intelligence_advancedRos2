@@ -1,0 +1,15 @@
+$ PING_N=100 ./netns.sh 0 ./capture.sh fast fast
+recv 100/100 loss 0.0% mean 1.88ms p50 1.77ms p95 2.88ms max 3.38ms connect 0.05s
+UDP 패킷 전체: 117 / 페이로드가 보인 패킷: 0
+$ PING_N=100 ./netns.sh 0 ./capture.sh fast cyclone
+recv 100/100 loss 0.0% mean 1.37ms p50 1.32ms p95 1.70ms max 2.72ms connect 0.05s
+UDP 패킷 전체: 423 / 페이로드가 보인 패킷: 220
+$ PING_N=100 ./netns.sh 0 ./capture.sh cyclone fast
+recv 100/100 loss 0.0% mean 1.33ms p50 1.29ms p95 1.46ms max 2.34ms connect 0.05s
+UDP 패킷 전체: 461 / 페이로드가 보인 패킷: 220
+$ PING_N=100 ./netns.sh 0 ./capture.sh cyclone cyclone
+recv 100/100 loss 0.0% mean 1.23ms p50 1.15ms p95 2.12ms max 2.85ms connect 0.05s
+UDP 패킷 전체: 364 / 페이로드가 보인 패킷: 220
+$ FASTDDS_BUILTIN_TRANSPORTS=UDPv4 PING_N=100 ./netns.sh 0 ./capture.sh fast fast
+recv 100/100 loss 0.0% mean 1.41ms p50 1.39ms p95 1.64ms max 1.89ms connect 0.05s
+UDP 패킷 전체: 446 / 페이로드가 보인 패킷: 220

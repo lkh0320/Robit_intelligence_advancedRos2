@@ -1,0 +1,10 @@
+delay=0ms ping=fast pong=fast loss 0.0% mean 2.03ms p95 2.77ms
+delay=0ms ping=cyclone pong=cyclone loss 0.0% mean 1.13ms p95 1.49ms
+delay=0ms ping=fast pong=cyclone loss 0.0% mean 1.30ms p95 1.42ms
+delay=0ms ping=cyclone pong=fast loss 0.0% mean 1.60ms p95 2.74ms
+delay=0ms ping=fast_udp pong=fast_udp loss 0.0% mean 1.44ms p95 1.91ms
+delay=20ms ping=fast pong=fast loss 0.0% mean 1.88ms p95 2.80ms
+delay=20ms ping=cyclone pong=cyclone loss 0.0% mean 42.53ms p95 43.60ms
+delay=20ms ping=fast pong=cyclone loss 0.0% mean 42.92ms p95 43.35ms
+delay=20ms ping=cyclone pong=fast loss 0.0% mean 42.56ms p95 43.22ms
+delay=20ms ping=fast_udp pong=fast_udp loss 0.0% mean 43.20ms p95 43.63ms

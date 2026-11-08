@@ -1,0 +1,11 @@
+# 측정 전 시험. 무효: 구독자 수만 보고 연결됐다고 판단해서, 왕복 경로가 다 붙기 전에 측정이 시작됐다.
+$ PING_N=20 ./netns.sh 0 ./capture.sh fast fast
+recv 20/20 loss 0.0% mean 1.78ms p50 1.68ms p95 2.88ms max 3.08ms connect 0.05s
+UDP 패킷 전체: 110 / 페이로드가 보인 패킷: 0
+$ PING_N=20 ./netns.sh 0 ./capture.sh fast cyclone
+recv 12/20 loss 40.0% mean 0.92ms p50 0.91ms p95 1.01ms max 1.01ms connect 0.05s
+UDP 패킷 전체: 235 / 페이로드가 보인 패킷: 42
+$ FASTDDS_BUILTIN_TRANSPORTS=UDPv4 PING_N=20 ./netns.sh 0 ./capture.sh fast fast
+recv 20/20 loss 0.0% mean 1.03ms p50 0.95ms p95 1.79ms max 2.21ms connect 0.10s
+UDP 패킷 전체: 240 / 페이로드가 보인 패킷: 60
+# 수정: ping.py 가 탐침을 보내고 돌아온 뒤에 측정을 시작하도록 바꿨다.

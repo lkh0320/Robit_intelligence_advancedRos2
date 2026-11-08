@@ -1,0 +1,7 @@
+# 패킷 세기에 tcpdump 를 먼저 썼다. Ubuntu 의 AppArmor 프로파일이 걸려 있어 종료 신호가 막혔다.
+$ PING_N=20 ./netns.sh 0 ./capture.sh fast fast
+recv 20/20 loss 0.0% mean 0.84ms p50 0.85ms p95 1.06ms max 1.16ms connect 0.05s
+capture.sh: line 11: kill: (52055) - Permission denied
+$ cat /proc/52055/attr/current
+tcpdump (enforce)
+# 대신 AF_PACKET 소켓으로 직접 세는 sniff.py 를 만들었다.

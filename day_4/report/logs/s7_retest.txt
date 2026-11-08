@@ -1,0 +1,20 @@
+# 2026-11-06 22:14:56 iface=wlp99s0 peer=192.168.0.15
+gap=0s run=1 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 9.56ms p50 5.85ms p95 32.38ms max 75.71ms connect 1.21s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=0s run=2 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 87.07ms p50 87.54ms p95 152.49ms max 163.22ms connect 1.69s | in_uni=0 in_multi=110 out_uni=110 out_multi=0
+gap=0s run=3 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 87.67ms p50 90.54ms p95 153.22ms max 162.28ms connect 1.73s | in_uni=0 in_multi=110 out_uni=110 out_multi=0
+gap=0s run=4 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 87.74ms p50 85.73ms p95 152.17ms max 168.10ms connect 1.80s | in_uni=1 in_multi=109 out_uni=110 out_multi=0
+gap=15s run=1 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 7.37ms p50 5.07ms p95 16.72ms max 58.54ms connect 3.29s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=15s run=2 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 4.94ms p50 4.71ms p95 6.89ms max 8.63ms connect 1.71s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=15s run=3 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 5.15ms p50 5.05ms p95 7.30ms max 8.26ms connect 1.66s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=60s run=1 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 4.58ms p50 4.54ms p95 6.12ms max 6.91ms connect 1.76s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=60s run=2 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 4.92ms p50 4.72ms p95 6.79ms max 8.23ms connect 1.60s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+gap=60s run=3 ping=cyclone pong=fast recv 100/100 loss 0.0% mean 5.92ms p50 5.73ms p95 8.75ms max 11.32ms connect 1.71s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=1 ping=fast pong=fast recv 100/100 loss 0.0% mean 5.19ms p50 5.11ms p95 7.29ms max 8.35ms connect 0.43s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=2 ping=fast pong=fast recv 100/100 loss 0.0% mean 6.36ms p50 5.04ms p95 8.81ms max 76.60ms connect 0.59s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=3 ping=fast pong=fast recv 100/100 loss 0.0% mean 5.96ms p50 5.48ms p95 9.73ms max 19.12ms connect 0.20s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=1 ping=cyclone pong=cyclone recv 100/100 loss 0.0% mean 5.54ms p50 5.38ms p95 9.05ms max 12.73ms connect 0.05s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=2 ping=cyclone pong=cyclone recv 100/100 loss 0.0% mean 4.49ms p50 4.33ms p95 6.69ms max 8.62ms connect 0.20s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=3 ping=cyclone pong=cyclone recv 100/100 loss 0.0% mean 5.49ms p50 4.82ms p95 7.73ms max 41.26ms connect 0.16s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=1 ping=fast pong=cyclone recv 100/100 loss 0.0% mean 5.48ms p50 4.97ms p95 9.06ms max 16.00ms connect 0.56s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=2 ping=fast pong=cyclone recv 100/100 loss 0.0% mean 5.70ms p50 5.28ms p95 9.76ms max 14.04ms connect 2.70s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
+control run=3 ping=fast pong=cyclone recv 100/100 loss 0.0% mean 5.87ms p50 5.03ms p95 12.84ms max 20.89ms connect 0.51s | in_uni=110 in_multi=0 out_uni=110 out_multi=0
